@@ -1,10 +1,12 @@
 
-def is_anagram(str1, str2):
-    return sorted(str1.lower()) == sorted(str2.lower())
+def move_zeros(arr):
+    non_zeros = [num for num in arr if num != 0]
+    zeros = [num for num in arr if num == 0]
+    return non_zeros + zeros
 
 
 if __name__ == "__main__":
-    str1 = input("Enter first word: ")
-    str2 = input("Enter second word: ")
-
-    print("Anagram:", is_anagram(str1, str2))
+    numbers = [0, 1, 0, 3, 12]
+    print("Original List:", numbers)
+    print("After Moving Zeros:", move_zeros(numbers))
+    
